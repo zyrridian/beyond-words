@@ -12,6 +12,10 @@ class ZColors {
   static const Color pink = Color(0xFFD65E8F);
   static const Color lightGrey = Color(0xFFF8F8FF);
 
+  static const Color primary = Color(0xFF3675C0);
+
+
+
 
 
 
@@ -20,7 +24,6 @@ class ZColors {
 
 
   // App Basic Colors
-  static const Color primary = Color(0xFF4B68FF);
   static const Color secondary = Color(0xFFFFE24B);
   static const Color accent = Color(0xFFB0C7FF);
 

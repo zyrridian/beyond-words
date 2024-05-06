@@ -3,6 +3,7 @@ class ZImages {
   static const String logo = "assets/images/logo.png";
   static const String google = "assets/images/logo-google.png";
   static const String facebook = "assets/images/logo-facebook.png";
+  static const String bannerImage = "assets/images/banner-image.png";
 
   // App Logos
   static const String darkAppLogo = "assets/logos/bengkel_splash_screen_black.jpg";
