@@ -1,4 +1,6 @@
+import 'package:beyond_words/features/learning/screens/learning/learning_detail.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
 import '../../../../../utils/constants/colors.dart';
@@ -21,19 +23,22 @@ class ZLearningBasicCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FractionallySizedBox(
-      widthFactor: widthFactor,
-      child: ZRoundedContainer(
-        radius: 9,
-        backgroundColor: backgroundColor,
-        padding: const EdgeInsets.symmetric(vertical: ZSizes.md, horizontal: ZSizes.lg),
-        child: Row(
-          mainAxisAlignment: mainAxisAlignment,
-          children: [
-            ImageIcon(AssetImage(image)),
-            const SizedBox(width: ZSizes.spaceBetweenItems),
-            Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500))
-          ],
+    return GestureDetector(
+      onTap: () => Get.to(() => const LearningDetailScreen()),
+      child: FractionallySizedBox(
+        widthFactor: widthFactor,
+        child: ZRoundedContainer(
+          radius: 9,
+          backgroundColor: backgroundColor,
+          padding: const EdgeInsets.symmetric(vertical: ZSizes.md, horizontal: ZSizes.lg),
+          child: Row(
+            mainAxisAlignment: mainAxisAlignment,
+            children: [
+              ImageIcon(AssetImage(image)),
+              const SizedBox(width: ZSizes.spaceBetweenItems),
+              Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500))
+            ],
+          ),
         ),
       ),
     );
