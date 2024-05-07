@@ -32,7 +32,7 @@ class ZAppBar extends StatelessWidget implements PreferredSizeWidget {
           leading: showBackArrow
               ? IconButton(
                   onPressed: () => Get.back(),
-                  icon: Icon(Iconsax.arrow_left, color: dark ? ZColors.white : ZColors.dark))
+                  icon: Icon(Iconsax.arrow_left_2, color: dark ? ZColors.white : ZColors.dark))
               : leadingIcon != null
                   ? IconButton(
                       onPressed: leadingPressed, icon: Icon(leadingIcon))

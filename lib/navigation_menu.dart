@@ -1,3 +1,4 @@
+import 'package:beyond_words/features/learning/screens/learning/learning.dart';
 import 'package:beyond_words/utils/constants/colors.dart';
 import 'package:beyond_words/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
     const HomeScreen(),
-    Container(),
+    const LearningScreen(),
     Container(),
     Container(),
   ];

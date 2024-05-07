@@ -14,6 +14,7 @@ class ZHomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: ZSizes.spaceBetweenItems),
         Text('Hello, $user', style: Theme.of(context).textTheme.headlineLarge),
