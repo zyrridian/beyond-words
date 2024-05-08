@@ -18,7 +18,12 @@ class LearningScreen extends StatelessWidget {
 
             /// Cards
             Padding(
-              padding: EdgeInsets.all(ZSizes.defaultSpace),
+              padding: EdgeInsets.only(
+                left: ZSizes.defaultSpace,
+                right: ZSizes.defaultSpace,
+                top: ZSizes.defaultSpace,
+                bottom: ZSizes.defaultSpace * 5,
+              ),
               child: Column(
                 children: [
                   /// Food & Emergency

@@ -16,6 +16,8 @@ class ZImages {
   static const String basic4 = "assets/images/basic4.png";
   static const String basic5 = "assets/images/basic5.png";
 
+  static const String emptyProfile = "assets/images/empty-profile.png";
+
   // App Logos
   static const String darkAppLogo = "assets/logos/bengkel_splash_screen_black.jpg";
   static const String lightAppLogo = "assets/logos/bengkel_splash_screen_white.jpg";

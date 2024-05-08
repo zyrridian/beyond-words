@@ -19,7 +19,7 @@ class LearningDetailScreen extends StatelessWidget {
           'Learn the basics',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
-        actions: [IconButton(onPressed: () {}, icon: Icon(Iconsax.bookmark))],
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.bookmark_outline))],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -33,7 +33,7 @@ class LearningDetailScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               /// Video Player
-              ZVideoPlayer(),
+              const ZVideoPlayer(),
               const SizedBox(height: ZSizes.spaceBetweenItems),
 
               /// Title

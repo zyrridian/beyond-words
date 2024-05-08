@@ -15,6 +15,7 @@ class ZColors {
   static const Color lightGrey = Color(0xFFF8F8FF);
 
   static const Color primary = Color(0xFF3675C0);
+  static const Color blue = Color(0xFF539DF3);
   static const Color lightBlue = Color(0xFFCEEEEE);
 
 
