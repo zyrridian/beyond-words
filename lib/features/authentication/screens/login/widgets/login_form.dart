@@ -26,6 +26,9 @@ class ZLoginForm extends StatelessWidget {
 
             /// Password
             TextFormField(
+              obscureText: true,
+              enableSuggestions: false,
+              autocorrect: false,
               decoration: const InputDecoration(
                 labelText: 'Password',
                 suffixIcon: Icon(Iconsax.eye_slash),

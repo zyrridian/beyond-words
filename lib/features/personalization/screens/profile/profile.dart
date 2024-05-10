@@ -34,22 +34,50 @@ class ProfileScreen extends StatelessWidget {
               const Image(image: AssetImage(ZImages.emptyProfile)),
               const SizedBox(height: ZSizes.spaceBetweenSections),
 
-              /// Name
-              TextFormField(decoration: const InputDecoration(labelText: 'Name')),
-              const SizedBox(height: ZSizes.spaceBetweenItems / 2),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  /// Name
+                  const Text('Name', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  TextFormField(
+                    // enabled: false,
+                    initialValue: 'Ashley Namir',
+                    decoration: const InputDecoration(
+                      hintText: 'Name',
+                      contentPadding: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 8),
+                    ),
+                  ),
+                  const SizedBox(height: ZSizes.spaceBetweenItems),
 
-              /// Email
-              TextFormField(decoration: const InputDecoration(labelText: 'Email')),
-              const SizedBox(height: ZSizes.spaceBetweenItems / 2),
+                  /// Email
+                  const Text('Email', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  TextFormField(
+                    // enabled: false,
+                    initialValue: 'ashley.namir@gmail.com',
+                    decoration: const InputDecoration(
+                      hintText: 'Email',
+                      contentPadding: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 8),
+                    ),
+                  ),
+                  const SizedBox(height: ZSizes.spaceBetweenItems),
 
-              /// Password
-              TextFormField(
-                decoration: const InputDecoration(
-                  labelText: 'Password',
-                  suffixIcon: Icon(Iconsax.eye_slash),
-                ),
+                  /// Password
+                  const Text('Password', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  TextFormField(
+                    // enabled: false,
+                    obscureText: true,
+                    enableSuggestions: false,
+                    autocorrect: false,
+                    initialValue: 'thisispassword',
+                    decoration: const InputDecoration(
+                      hintText: 'Password',
+                      contentPadding: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 8),
+                      suffixIcon: Icon(Iconsax.eye_slash),
+                    ),
+                  ),
+                  const SizedBox(height: ZSizes.spaceBetweenItems),
+                ],
               ),
-              const SizedBox(height: ZSizes.spaceBetweenItems / 2),
 
               /// Button
               Align(
@@ -57,19 +85,20 @@ class ProfileScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                      elevation: 0,
-                      foregroundColor: Colors.white,
-                      backgroundColor: ZColors.blue,
-                      disabledForegroundColor: Colors.grey,
-                      disabledBackgroundColor: Colors.grey,
-                      side: const BorderSide(color: ZColors.blue),
-                      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                      textStyle: const TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(9))),
+                    elevation: 0,
+                    foregroundColor: Colors.white,
+                    backgroundColor: ZColors.blue,
+                    disabledForegroundColor: Colors.grey,
+                    disabledBackgroundColor: Colors.grey,
+                    side: const BorderSide(color: ZColors.blue),
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                  ),
                   child: const Text('Edit Profile', style: TextStyle(fontSize: 14)),
                 ),
               ),
@@ -93,6 +122,7 @@ class ProfileScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+
                   /// Add Account
                   TextButton(
                     onPressed: () {},
@@ -105,6 +135,7 @@ class ProfileScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+
                   /// Logout
                   TextButton(
                     onPressed: () {},

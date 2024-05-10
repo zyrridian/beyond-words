@@ -1,5 +1,6 @@
 import 'package:beyond_words/features/learning/screens/learning/learning.dart';
 import 'package:beyond_words/features/personalization/screens/profile/profile.dart';
+import 'package:beyond_words/features/translator/screens/translator.dart';
 import 'package:beyond_words/utils/constants/colors.dart';
 import 'package:beyond_words/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class NavigationMenu extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: ClipOval(
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () => Get.to(() => const TranslatorScreen()),
           backgroundColor: ZColors.blue,
           foregroundColor: Colors.white,
           elevation: 0,
