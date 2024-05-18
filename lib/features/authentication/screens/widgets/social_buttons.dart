@@ -25,8 +25,8 @@ class ZSocialButtons extends StatelessWidget {
           children: [
             Image(image: AssetImage(image)),
             const SizedBox(width: ZSizes.spaceBetweenItems),
-            const Expanded(
-              child: Text('Continue with Google', textAlign: TextAlign.center),
+            Expanded(
+              child: Text(text, textAlign: TextAlign.center),
             )
           ],
         ),
