@@ -1,10 +1,8 @@
 import 'package:beyond_words/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:beyond_words/utils/constants/colors.dart';
 import 'package:beyond_words/utils/constants/sizes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../learning_basic.dart';
 
 class ZLearningCard extends StatelessWidget {
   const ZLearningCard({
@@ -20,7 +18,7 @@ class ZLearningCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(() => const LearningBasic()),
+      onTap: onTap,
       child: ZRoundedContainer(
         height: 160,
         padding: const EdgeInsets.symmetric(vertical: ZSizes.lg, horizontal: ZSizes.md),
@@ -29,7 +27,7 @@ class ZLearningCard extends StatelessWidget {
           children: [
             Text(title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
             const SizedBox(height: ZSizes.spaceBetweenItems),
-            Image(image: AssetImage(image))
+            Expanded(child: Image(image: AssetImage(image)))
           ],
         ),
       ),

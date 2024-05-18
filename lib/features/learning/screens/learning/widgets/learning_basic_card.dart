@@ -1,6 +1,4 @@
-import 'package:beyond_words/features/learning/screens/learning/learning_detail.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
 import '../../../../../utils/constants/colors.dart';
@@ -14,17 +12,19 @@ class ZLearningBasicCard extends StatelessWidget {
     this.backgroundColor = ZColors.lightBlue,
     this.widthFactor = 1,
     this.mainAxisAlignment = MainAxisAlignment.start,
+    this.onTap,
   });
 
   final String image, title;
   final Color backgroundColor;
   final double widthFactor;
   final MainAxisAlignment mainAxisAlignment;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(() => const LearningDetailScreen()),
+      onTap: onTap,
       child: FractionallySizedBox(
         widthFactor: widthFactor,
         child: ZRoundedContainer(

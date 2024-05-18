@@ -1,5 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'app.dart';
 
@@ -14,6 +15,7 @@ Future<void> main() async {
   // Todo: Initialize Authentication
 
   WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   cameras = await availableCameras();
   runApp(const App());
 

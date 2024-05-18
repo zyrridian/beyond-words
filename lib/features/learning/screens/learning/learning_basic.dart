@@ -4,20 +4,15 @@ import 'package:beyond_words/utils/constants/colors.dart';
 import 'package:beyond_words/utils/constants/image_strings.dart';
 import 'package:beyond_words/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class LearningBasic extends StatelessWidget {
-  const LearningBasic({super.key});
+import 'learning_detail.dart';
+
+class LearningBasicScreen extends StatelessWidget {
+  const LearningBasicScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    /// Card Data
-    final List<Map<String, dynamic>> basicCards = [
-      {'image': ZImages.basic1, 'title': 'Hello world!'},
-      {'image': ZImages.basic2, 'title': 'That, over there.'},
-      {'image': ZImages.basic3, 'title': "Let's do something!"},
-      {'image': ZImages.basic4, 'title': "I'm feeling happy!"},
-    ];
-
     return Scaffold(
       appBar: const ZAppBar(showBackArrow: true),
       body: Padding(
@@ -38,20 +33,33 @@ class LearningBasic extends StatelessWidget {
             const SizedBox(height: ZSizes.spaceBetweenItems),
 
             /// Cards
-            ListView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: basicCards.length,
-              itemBuilder: (context, index) {
-                final card = basicCards[index];
-                return Column(
-                  children: [
-                    ZLearningBasicCard(
-                        image: card['image'], title: card['title']),
-                    const SizedBox(height: ZSizes.spaceBetweenItems)
-                  ],
-                );
-              },
+            Column(
+              children: [
+                ZLearningBasicCard(
+                  image: ZImages.basic1,
+                  title: 'Hello world!',
+                  onTap: () => Get.to(() => const LearningDetailScreen()),
+                ),
+                const SizedBox(height: ZSizes.spaceBetweenItems),
+                ZLearningBasicCard(
+                  image: ZImages.basic2,
+                  title: 'That, over there.',
+                  onTap: () {},
+                ),
+                const SizedBox(height: ZSizes.spaceBetweenItems),
+                ZLearningBasicCard(
+                  image: ZImages.basic3,
+                  title: "Let's do something!",
+                  onTap: () {},
+                ),
+                const SizedBox(height: ZSizes.spaceBetweenItems),
+                ZLearningBasicCard(
+                  image: ZImages.basic4,
+                  title: "I'm feeling happy!",
+                  onTap: () {},
+                ),
+                const SizedBox(height: ZSizes.spaceBetweenItems),
+              ],
             ),
 
             /// Quiz Card
